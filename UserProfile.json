@@ -1,0 +1,57 @@
+{
+    "details": {
+        "name": "Lalit Kukreja",
+        "designation": "Manager",
+        "skill": [{
+            "technical": ["Javascript", "Angular", "ReactJS", "OOPs", "TypeScript", "Atlassian JIRA", "TFVC"],
+            "managerial": ["Manager Skill level 3"]
+        }],
+        "experience": [{
+            "designation": "Senior Software Engineer",
+            "compnayName": "R Systems",
+            "start": "Feb 2019",
+            "end": "Present",
+            "company": "rsystems",
+            "id": "Ex1"
+        }, {
+            "designation": "Programmer Analyst",
+            "compnayName": "Cognizant",
+            "start": "Sep 2019",
+            "end": "Feb 2019",
+            "company": "cognizant",
+            "id": "Ex2"
+        }, {
+            "designation": "Systems Engineer",
+            "compnayName": "Infosys",
+            "start": "June 2014",
+            "end": "Sep 2016",
+            "company": "infosys",
+            "id": "Ex3"
+        }],
+        "education":[{
+            "name": "Maharaja Surajmal Institute of Technology",
+            "course": "Bachelor of Technology(BE)",
+            "main": "Electronics and Communication Engineering",
+            "start": "Aug 2010",
+            "end": "May 2014",
+            "logo": "msit",
+            "id": "Ed1"
+        },{
+            "name": "Surmermal Jain Public School",
+            "course": "Senior Secondary",
+            "main": "Non-medical",
+            "start": "Apr 2009",
+            "end": "Mar 2010",
+            "logo": "smjps",
+            "id": "Ed2"
+        }],
+        "trainings":[{
+            "name": "National Thermal Power Co-opertaion",
+            "course": "Electric Thermal Energy",
+            "start": "July 2012",
+            "end": "Aug 2012",
+            "id": "T1",
+            "logo": "smjps"
+        }]
+    }
+}
