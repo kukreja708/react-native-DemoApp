@@ -1,10 +1,9 @@
 import React from 'react';
-import { Text, View, Image } from 'react-native';
+import { Image } from 'react-native';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createAppContainer } from 'react-navigation';
 import { AllPending } from './dashboard/AllPending';
 import { GoalList } from './dashboard/GoalList';
-import { createStackNavigator } from 'react-navigation-stack';
 import { TaskList } from './dashboard/TaskList';
 import { FeedbackList } from './dashboard/FeedbackList';
 
@@ -23,17 +22,8 @@ const ActData = [{
 }];
 
 const getDashboardTabs = () => {
-
-    // return ActData.map(item => {
-    //     item['Key'] = {
-    //         screen: item['Value']
-    //     }
-    // })
-
     return ActData.reduce((routes, tab) => {
-        routes[tab.Key] = {
-            screen: tab.Value
-        };
+        routes[tab.Key] = getTabScreen(tab);
 
         return routes;
     }, {})
@@ -41,18 +31,42 @@ const getDashboardTabs = () => {
 }
 
 const getTabScreen = (tab) => {
-    switch(tab.Key) {
-        case 'All Pending':
-        return <AllPending />
+    switch (tab.Key) {
+        case 'AllPending':
+            return {
+                screen: AllPending,
+                navigationOptions: {
+                    title: 'All Pending',
+                }
+            };
+
+        case 'Goals':
+            return {
+                screen: GoalList,
+                navigationOptions: {
+                    title: 'Goals ',
+                }
+            };
+
+        case 'Tasks':
+            return {
+                screen: TaskList,
+                navigationOptions: {
+                    title: 'Tasks',
+                }
+            };
+
+        case 'Feedbacks':
+            return {
+                screen: FeedbackList,
+                navigationOptions: {
+                    title: 'Feedbacks',
+                }
+            };
+
     }
 }
 const HomeScreen = createBottomTabNavigator(
-    // {
-    //     AllPending: { screen: AllPending },
-    //     Goals: { screen: GoalList },
-    //     Tasks: { screen: TaskList },
-    //     Feedbacks: { screen: FeedbackList }
-    // },
     getDashboardTabs(),
     {
         tabBarPosition: 'bottom',
